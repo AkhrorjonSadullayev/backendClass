@@ -1,0 +1,21 @@
+{
+  "name": "backend-first",
+  "version": "1.0.0",
+  "main": "uchinchi.js",
+  "scripts": {
+    "start": "node uchinchi.js",
+    "dev": "nodemon uchinchi.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.0",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
