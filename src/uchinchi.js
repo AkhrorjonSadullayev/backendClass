@@ -1,14 +1,15 @@
 import express from "express";
 import { PORT } from "./utils/secrets.js";
 import { Routes } from './routes/index.js'
+import { MONGODB_CONNECT } from "./utils/database.config.js";
 
 const server = express();
 
-// Body-parsing middleware should be before the routes
+void MONGODB_CONNECT()
+
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
-// Apply routes
 Routes.forEach((value) => {
     server.use(value.path, value.router);
 });
