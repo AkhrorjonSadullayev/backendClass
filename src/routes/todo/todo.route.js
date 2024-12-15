@@ -19,8 +19,8 @@ import { DeleteTodo, getAllTodo, getByIdTodo, todoAdd, UpdateTodo } from '../../
 import { validate } from '../../validators/validator.js';
 import { addV, updateV } from '../../validators/todo/todo.validator.js';
 
-router.post("/add", addV() ,validate, todoAdd)// (malumotlarni qo'shish uchun ishlatamiz!!!!)
-
+router.post("/add",  todoAdd)// (malumotlarni qo'shish uchun ishlatamiz!!!!)
+        //   addV() ,validate, huddi shu joyga qo'shish kerak
 router.put('/edit/:id',updateV(),validate, UpdateTodo)//datani edit qilish uchun ishlatiladi
 
 router.get('/get/:id',getByIdTodo) // datani idsi bo'yicha qabul qilib olish
